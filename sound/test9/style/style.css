@@ -1,0 +1,53 @@
+body{
+	margin: 0;
+}
+
+button{
+	position:fixed; 
+	top:20px; 
+	left:20px; 
+	z-index:2; 
+}
+
+canvas { 
+	position:fixed; 
+	top:0; 
+	left:0; 
+	z-index:1; 
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {
+    	opacity: 0;
+    	z-index: -999;
+    }
+}
+
+#loader{
+	background-color: white;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	position: fixed;
+	animation-name: fadeOut;
+    animation-duration: .450s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+
+.icon{
+	font-size: 30px;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%;
+}
+
+.fadeOut{
+	 animation-play-state: running !important;
+}
